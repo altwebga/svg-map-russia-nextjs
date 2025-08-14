@@ -3,20 +3,15 @@
 import { MouseEvent, useState } from "react";
 import { Tooltip } from "./Tooltip";
 
-const descriptions: Record<string, string> = {
-  "RU-MOW": "Столица России",
-  "RU-SPE": "Культурная столица России",
-};
+interface RussianMapProps {
+  onRegionSelect: (region: { title: string; code: string }) => void;
+}
 
-export function RussianMap() {
+export function RussianMap({ onRegionSelect }: RussianMapProps) {
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;
     title: string;
-  } | null>(null);
-  const [selected, setSelected] = useState<{
-    title: string;
-    code: string;
   } | null>(null);
 
   const handleMouseMove = (e: MouseEvent<SVGSVGElement>) => {
@@ -36,11 +31,9 @@ export function RussianMap() {
     const title = target.dataset.title;
     const code = target.dataset.code;
     if (title && code) {
-      setSelected({ title, code });
+      onRegionSelect({ title, code });
     }
   };
-
-  const closeModal = () => setSelected(null);
 
   return (
     <div className="mt-20 rf-map">
@@ -502,16 +495,6 @@ export function RussianMap() {
         />
       </svg>
       {tooltip && <Tooltip x={tooltip.x} y={tooltip.y} title={tooltip.title} />}
-      {selected && (
-        <RegionModal
-          title={selected.title}
-          description={
-            descriptions[selected.code] ??
-            `Описание для ${selected.title} отсутствует`
-          }
-          onClose={closeModal}
-        />
-      )}
     </div>
   );
 }
