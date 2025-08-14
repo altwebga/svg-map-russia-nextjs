@@ -1,4 +1,41 @@
+"use client";
+
+import { MouseEvent, useState } from "react";
+import { Tooltip } from "./Tooltip";
+import { RegionModal } from "./RegionModal";
+
+const descriptions: Record<string, string> = {
+  "RU-MOW": "Столица России",
+  "RU-SPE": "Культурная столица России",
+};
+
 export function RussianMap() {
+  const [tooltip, setTooltip] = useState<{ x: number; y: number; title: string } | null>(null);
+  const [selected, setSelected] = useState<{ title: string; code: string } | null>(null);
+
+  const handleMouseMove = (e: MouseEvent<SVGSVGElement>) => {
+    const target = e.target as SVGPathElement;
+    const title = target.dataset.title;
+    if (title) {
+      setTooltip({ x: e.clientX + 12, y: e.clientY + 12, title });
+    } else {
+      setTooltip(null);
+    }
+  };
+
+  const handleMouseLeave = () => setTooltip(null);
+
+  const handleClick = (e: MouseEvent<SVGSVGElement>) => {
+    const target = e.target as SVGPathElement;
+    const title = target.dataset.title;
+    const code = target.dataset.code;
+    if (title && code) {
+      setSelected({ title, code });
+    }
+  };
+
+  const closeModal = () => setSelected(null);
+
   return (
     <div className="mt-20 rf-map">
       <svg
@@ -8,6 +45,9 @@ export function RussianMap() {
         x="0px"
         y="0px"
         viewBox="0 0 1000 600"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
       >
         <path
           d="m 130.24729,259.26463 -0.71301,-1.3323 -0.83965,1.13893 -1.20312,0.61639 -0.3652,1.98343 -2.7566,-1.20341 -1.29507,1.2557 -1.79887,-1.96928 -0.51738,2.08913 -1.70104,0.51357 0.48353,2.36036 1.41813,-1.06374 1.07846,1.34199 2.31013,-0.11587 0.63117,-1.4221 0.77636,1.28888 1.63087,-0.86752 1.60105,1.08107 2.52028,-0.21377 0.38854,-1.63667 -0.76508,-2.45949 0.30997,-0.96605 c -0.75062,0.0982 -0.83803,-0.13605 -1.19347,-0.41925 z"
@@ -455,6 +495,16 @@ export function RussianMap() {
           data-code="RU-LUG"
         />
       </svg>
+      {tooltip && <Tooltip x={tooltip.x} y={tooltip.y} title={tooltip.title} />}
+      {selected && (
+        <RegionModal
+          title={selected.title}
+          description={
+            descriptions[selected.code] ?? `Описание для ${selected.title} отсутствует`
+          }
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 }
