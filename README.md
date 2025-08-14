@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Код    | Регион                              |
+| ------ | ----------------------------------- |
+| RU-MOW | Москва                              |
+| RU-SPE | Санкт-Петербург                     |
+| RU-NEN | Ненецкий АО                         |
+| RU-YAR | Ярославская область                 |
+| RU-CHE | Челябинская область                 |
+| RU-ULY | Ульяновская область                 |
+| RU-TYU | Тюменская область                   |
+| RU-TUL | Тульская область                    |
+| RU-SVE | Свердловская область                |
+| RU-RYA | Рязанская область                   |
+| RU-ORL | Орловская область                   |
+| RU-OMS | Омская область                      |
+| RU-NGR | Новгородская область                |
+| RU-LIP | Липецкая область                    |
+| RU-KRS | Курская область                     |
+| RU-KGN | Курганская область                  |
+| RU-KGD | Калининградская область             |
+| RU-IVA | Ивановская область                  |
+| RU-BRY | Брянская область                    |
+| RU-AST | Астраханская область                |
+| RU-KHA | Хабаровский край                    |
+| RU-CE  | Чеченская Республика                |
+| RU-UD  | Удмуртская Республика               |
+| RU-SE  | Республика Северная Осетия — Алания |
+| RU-MO  | Республика Мордовия                 |
+| RU-KR  | Республика Карелия                  |
+| RU-KL  | Республика Калмыкия                 |
+| RU-IN  | Республика Ингушетия                |
+| RU-AL  | Республика Алтай                    |
+| RU-BA  | Республика Башкортостан             |
+| RU-AD  | Республика Адыгея                   |
+| RU-CR  | Республика Крым                     |
+| RU-SEV | Севастополь                         |
+| RU-KO  | Республика Коми                     |
+| RU-KIR | Кировская область                   |
+| RU-PNZ | Пензенская область                  |
+| RU-TAM | Тамбовская область                  |
+| RU-MUR | Мурманская область                  |
+| RU-LEN | Ленинградская область               |
+| RU-VLG | Вологодская область                 |
+| RU-KOS | Костромская область                 |
+| RU-PSK | Псковская область                   |
+| RU-ARK | Архангельская область               |
+| RU-YAN | Ямало-Ненецкий АО                   |
+| RU-CHU | Чукотский АО                        |
+| RU-YEV | Еврейская автономная область        |
+| RU-TY  | Республика Тыва                     |
+| RU-SAK | Сахалинская область                 |
+| RU-AMU | Амурская область                    |
+| RU-BU  | Республика Бурятия                  |
+| RU-KK  | Республика Хакасия                  |
+| RU-KEM | Кемеровская область                 |
+| RU-NVS | Новосибирская область               |
+| RU-ALT | Алтайский край                      |
+| RU-DA  | Республика Дагестан                 |
+| RU-STA | Ставропольский край                 |
+| RU-KB  | Кабардино-Балкарская Республика     |
+| RU-KC  | Карачаево-Черкесская Республика     |
+| RU-KDA | Краснодарский край                  |
+| RU-ROS | Ростовская область                  |
+| RU-SAM | Самарская область                   |
+| RU-TA  | Республика Татарстан                |
+| RU-ME  | Республика Марий Эл                 |
+| RU-CU  | Чувашская Республика                |
+| RU-NIZ | Нижегородская область               |
+| RU-VLA | Владимирская область                |
+| RU-MOS | Московская область                  |
+| RU-KLU | Калужская область                   |
+| RU-BEL | Белгородская область                |
+| RU-ZAB | Забайкальский край                  |
+| RU-PRI | Приморский край                     |
+| RU-KAM | Камчатский край                     |
+| RU-MAG | Магаданская область                 |
+| RU-SA  | Республика Саха (Якутия)            |
+| RU-KYA | Красноярский край                   |
+| RU-ORE | Оренбургская область                |
+| RU-SAR | Саратовская область                 |
+| RU-VGG | Волгоградская область               |
+| RU-VOR | Воронежская область                 |
+| RU-SMO | Смоленская область                  |
+| RU-TVE | Тверская область                    |
+| RU-PER | Пермский край                       |
+| RU-KHM | Ханты-Мансийский АО — Югра          |
+| RU-TOM | Томская область                     |
+| RU-IRK | Иркутская область                   |
+| RU-HR  | Херсонская область                  |
+| RU-ZP  | Запорожская область                 |
+| RU-DON | Донецкая Народная Республика        |
+| RU-LUG | Луганская Народная Республика       |
