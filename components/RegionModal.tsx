@@ -19,6 +19,7 @@ export function RegionModal({ title, description, onClose }: RegionModalProps) {
         <h2 className="mb-2 text-xl font-bold">{title}</h2>
         <p className="mb-4">{description}</p>
         <button
+          type="button"
           className="rounded bg-blue-500 px-4 py-2 text-white"
           onClick={onClose}
         >

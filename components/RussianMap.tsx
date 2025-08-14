@@ -2,7 +2,6 @@
 
 import { MouseEvent, useState } from "react";
 import { Tooltip } from "./Tooltip";
-import { RegionModal } from "./RegionModal";
 
 const descriptions: Record<string, string> = {
   "RU-MOW": "Столица России",
@@ -10,8 +9,15 @@ const descriptions: Record<string, string> = {
 };
 
 export function RussianMap() {
-  const [tooltip, setTooltip] = useState<{ x: number; y: number; title: string } | null>(null);
-  const [selected, setSelected] = useState<{ title: string; code: string } | null>(null);
+  const [tooltip, setTooltip] = useState<{
+    x: number;
+    y: number;
+    title: string;
+  } | null>(null);
+  const [selected, setSelected] = useState<{
+    title: string;
+    code: string;
+  } | null>(null);
 
   const handleMouseMove = (e: MouseEvent<SVGSVGElement>) => {
     const target = e.target as SVGPathElement;
@@ -500,7 +506,8 @@ export function RussianMap() {
         <RegionModal
           title={selected.title}
           description={
-            descriptions[selected.code] ?? `Описание для ${selected.title} отсутствует`
+            descriptions[selected.code] ??
+            `Описание для ${selected.title} отсутствует`
           }
           onClose={closeModal}
         />
