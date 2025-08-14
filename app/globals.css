@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@utility rf-map {
+  [data-code] {
+    fill: #337ab7;
+    transition: fill 0.2s ease-in-out;
+  }
+  [data-code]:hover {
+    fill: #1a243e;
+  }
+}
