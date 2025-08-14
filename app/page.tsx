@@ -12,7 +12,7 @@ export default function Home() {
   } | null>(null);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-4 space-x-4">
+    <div className="container mx-auto flex flex-col md:flex-row justify-center items-center px-4 space-x-4 h-screen">
       <div className="w-full md:w-1/2">
         <RussianMap onRegionSelect={setSelected} />
       </div>

@@ -33,4 +33,8 @@ body {
   [data-code]:hover {
     fill: #1a243e;
   }
+  [data-code="RU-AL"] {
+    fill: #1a243e;
+    cursor: pointer;
+  }
 }
