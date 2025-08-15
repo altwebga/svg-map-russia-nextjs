@@ -1,3 +1,49 @@
+# SVG Map Russia Next.js
+
+## English
+
+### Overview
+This project is a Next.js application that renders an interactive SVG map of Russia. Each region highlights on hover and displays a tooltip with a description sourced from JSON data.
+
+### Features
+- Interactive SVG map of Russia
+- Region tooltips with descriptions
+- Built with Next.js, React 19, and Tailwind CSS 4
+
+### Getting Started
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Русский
+
+### Описание
+Этот проект — приложение Next.js, которое отображает интерактивную SVG‑карту России. При наведении на регион он подсвечивается и показывает подсказку с описанием из JSON‑файла.
+
+### Возможности
+- Интерактивная SVG‑карта России
+- Подсказки с описаниями регионов
+- Используются Next.js, React 19 и Tailwind CSS 4
+
+### Начало работы
+1. Установите зависимости:
+   ```bash
+   npm install
+   ```
+2. Запустите сервер разработки:
+   ```bash
+   npm run dev
+   ```
+3. Откройте в браузере [http://localhost:3000](http://localhost:3000).
+
+## Коды регионов
+
 | Код    | Регион                              |
 | ------ | ----------------------------------- |
 | RU-MOW | Москва                              |
